@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <link rel="stylesheet" href="../css/storecontent.css">
 <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 </head>
@@ -137,6 +138,9 @@
 			</div>
 		</div>
 		<!-- 분류보기 end -->
+	<a href="productadd_write.jsp">상품등록하기</a>
+	<a href="pay.jsp">결제하기</a>
+	
 	</div>
 </body>
 </html>

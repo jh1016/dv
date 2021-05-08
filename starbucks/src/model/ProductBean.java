@@ -10,7 +10,13 @@ public class ProductBean {
 	private String p_img ;
 	private String p_subtitle ;
 	private String p_desc ;
-	
+	private String p_ename;
+	public String getP_ename() {
+		return p_ename;
+	}
+	public void setP_ename(String p_ename) {
+		this.p_ename = p_ename;
+	}
 	public int getProduct_() {
 		return product_;
 	}
@@ -53,5 +59,8 @@ public class ProductBean {
 	public void setP_desc(String p_desc) {
 		this.p_desc = p_desc;
 	}
+	
+	
+	
 	
 }

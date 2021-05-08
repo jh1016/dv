@@ -1,6 +1,7 @@
 select * from tab;
 drop table food;
 select * from food;
+delete  from food;
 
 create table food(
 	product_number number,
@@ -18,5 +19,7 @@ create table food(
 	f_caffeine number,
 	primary key(product_number));
 
-
-
+create sequence starb_seq
+start with 1
+increment by 1
+nocache;

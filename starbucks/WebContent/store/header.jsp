@@ -13,7 +13,7 @@
 <body>
 <header>
 	<div>
-		<h1 style="margin-bottom: 0px; margin-top: 0px;"><a href=""><img alt="Starbucks" src="/starbucks/brand44_i1.png" width=65px; height=65px;></a></h1>
+		<h1 style="margin-bottom: 0px; margin-top: 0px;"><a href=""><img alt="Starbucks" src="/starbucks_ji/brand44_i1.png" width=65px; height=65px;></a></h1>
 		<nav>
 		<ul class="main-menu">
 			<li><a href="content.jsp" class="b">COFFEE</a></li>

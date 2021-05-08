@@ -9,8 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.jasper.tagplugins.jstl.core.Catch;
+
 import service.Action;
 import service.ActionForward;
+import service.Check;
+import service.FoodAddAction;
+import service.OrderAction;
+import service.ProductAddAction;
 
 
 /**
@@ -33,6 +39,45 @@ public void doProcess(HttpServletRequest request, HttpServletResponse response) 
 		Action action = null;
 		ActionForward forward = null;
 		
+		// 상품등록
+		if(command.equals("/ProductAddAction.do")) {
+			try {
+				action = new ProductAddAction();
+				forward = action.execute(request, response);
+
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+
+
+			
+		// 음식등록
+		}else if(command.equals("/FoodAddAction.do")) {
+			try {
+				action = new FoodAddAction();
+				forward = action.execute(request, response);
+
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		
+		//주문완료
+		}else if(command.equals("/OrderAction.do")) {
+			try {
+				action = new OrderAction();
+				forward = action.execute(request, response);
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+					
+		} /*
+			 * else if(command.equals("/order_pay.do")) { try{ action = new Order_pay();
+			 * forward = action.execute(request, response); }catch(Exception e) {
+			 * e.printStackTrace(); } }
+			 */
+	
 		
 		//forwarding 처리
 		if(forward != null) {
@@ -40,11 +85,10 @@ public void doProcess(HttpServletRequest request, HttpServletResponse response) 
 				response.sendRedirect(forward.getPath());
 			}else {						//dispatcher 방식으로 포워딩
 				RequestDispatcher dispatchar = 
-						request.getRequestDispatcher(forward.getPath());
+				request.getRequestDispatcher(forward.getPath());
 				dispatchar.forward(request, response);
 			}
 		}
-		
 		
 		
 	} // doProcess() end

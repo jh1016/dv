@@ -9,7 +9,7 @@ create table orders(
 	id varchar2(20) not null,
 	store_code number not null,
 	c_num number,
-	product_number number not null,
+	product_number not null,
 	o_price number not null,
 	o_quantity number not null,
 	o_paytype  varchar2(20) not null,
@@ -23,3 +23,7 @@ create table orders(
 	foreign key(c_num) references cart(c_num)
 	);
 
+create sequence order_seq
+start with 1
+increment by 1
+nocache;

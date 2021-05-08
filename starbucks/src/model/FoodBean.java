@@ -15,7 +15,22 @@ public class FoodBean {
 	private int f_natrium;
 	private int f_fat;
 	private int f_caffeine;
-
+	private String f_ename;
+	private String f_subtitle;
+	
+	
+	public String getF_subtitle() {
+		return f_subtitle;
+	}
+	public void setF_subtitle(String f_subtitle) {
+		this.f_subtitle = f_subtitle;
+	}
+	public String getF_ename() {
+		return f_ename;
+	}
+	public void setF_ename(String f_ename) {
+		this.f_ename = f_ename;
+	}
 	public int getProduct_number() {
 		return product_number;
 	}
